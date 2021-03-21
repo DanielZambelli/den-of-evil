@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="screen" id="startScreen">
+        <div class="screenText">Shadowy creatures from beyond the grave lurks in these caves. If you are sincere about helping, destroy the foul beasts...</div>
+        <div class="screenButton" onClick="handleStartClick()">Enter The Den of Evil</div>
+        <div class="screenHints">
+          <div><img src="assets/arrows.jpg" width="35px"> Use arrow keys to move</div>
+          <div><img src="assets/smily.png" width="25px"> Have fun!</div>
+        </div>
+      </div>
+      <div class="screen" id="winnerScreen">
+        <div class="screenText">You have cleansed the Den of Evil. You've earned my trust and may yet restore faith in humanity.</div>
+        <div class="screenButton" onClick="handleRestartClick()">Restart</div>
+      </div>
+      <div class="screen" id="deathScreen">
+        <div class="screenText">You have fallen and the forces of evil remains a threat spilling darkness into sanctuary.</div>
+        <div class="screenButton" onClick="handleRestartClick()">Restart</div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

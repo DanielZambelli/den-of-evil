@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+body{
+  background: #0e0e0e;
+  min-width: 800px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  user-select: none;
+}
+
+.screen{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9;
+  transform: translate(-50%, -50%);
+  background: #000;
+  opacity: .92;
+  padding: 45px;
+  width: 400px;
+  border-radius: 5px;
+  border: 1px solid #E1BD5A;
+  color: #B6B4B4;
+}
+
+.screenText{
+  font-size: 17px;
+  line-height: 28px;
+  margin-bottom: 75px;
+}
+
+.screenButton{
+  color: #E1BD5A;
+  border: 2px solid #E1BD5A;
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 5px;
+  margin: auto;
+  cursor: pointer;
+  max-width: 160px;
+  text-align: center;
+  margin-bottom: 155px;
+}
+
+.screenHints{
+  font-size: 11px;
+  opacity: .2;
+  text-align: center;
+}
+
+.screenHints div{
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.screenHints div img{
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#winnerScreen, #deathScreen{
+  display: none;
+}
+
+#winnerScreen .screenButton, #deathScreen .screenButton{
+  margin-bottom: 0px;;
+}
+
+.map{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: black;
+  border: 15px solid #000;
+}
+
+.tile{
+  display: inline-block;
+  margin: -.5px;
+  width: 96px;
+  height: 96px;
+}
+
+.tile.rotate1{
+  transform: rotate(90deg);
+}
+.tile.rotate2{
+  transform: rotate(180deg);
+}
+.tile.rotate3{
+  transform: rotate(270deg);
+}
+
+.tileWall{
+  background: #070203 url('./assets/wall.png');
+  background-size: cover;
+}
+
+.tilePath{
+  background: #070203 url('./assets/path.png');
+  background-size: cover;
+  opacity: .5;
+}
+
+.player{
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  z-index: 1;
+  background: transparent url('./assets/barbarian.gif') no-repeat center center;
+}
+
+.monster{
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  z-index: 1;
+  margin-top: -1px;
+  background: red;
+}
+
+.monster.fallen{
+  background: transparent url('./assets/fallen.gif') no-repeat center center;
+}
+
+.monster.zombie{
+  background: transparent url('./assets/zombie.gif') no-repeat center center;
+  background-size: 35px;
+}
+
+.monster.dead{
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.healthBar{
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translate(-50%);
+  height: 2px;
+  width: 40%;
+  background: red;
+  opacity: .2;
+}
+
+.healthBar.hidden{ display: none; }
+
+.healthIndicator{
+  width: 100%;
+  height: 100%;
+  background: green;
+}
